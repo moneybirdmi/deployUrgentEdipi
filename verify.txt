@@ -1,0 +1,97 @@
+yarn deploy
+yarn run v1.22.5
+warning package.json: No license field
+$ yarn migrate && yarn verify
+warning package.json: No license field
+$ truffle migrate --network bscTestnet --reset
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/EDIPI.sol
+> Compiling ./contracts/Migrations.sol
+> Compiling @pancakeswap/pancake-swap-lib/contracts/GSN/Context.sol
+> Compiling @pancakeswap/pancake-swap-lib/contracts/access/Ownable.sol
+> Compiling @pancakeswap/pancake-swap-lib/contracts/math/SafeMath.sol
+> Compiling @pancakeswap/pancake-swap-lib/contracts/token/BEP20/BEP20.sol
+> Compiling @pancakeswap/pancake-swap-lib/contracts/token/BEP20/IBEP20.sol
+> Compiling @pancakeswap/pancake-swap-lib/contracts/utils/Address.sol
+> Artifacts written to /home/muneeb/work/DIPI swap/deployUrgentEdipi/build/contracts
+> Compiled successfully using:
+   - solc: 0.6.12+commit.27d51765.Emscripten.clang
+
+
+
+Starting migrations...
+======================
+> Network name:    'bscTestnet'
+> Network id:      97
+> Block gas limit: 30000000 (0x1c9c380)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x9a2f6ffc038b0768db17fc0d268ab9563eb0e805866bfcd1b92692740c13090a
+   > Blocks: 5            Seconds: 19
+   > contract address:    0xA97f3f26335CBbA722AfF84838716F0a4a008943
+   > block number:        7433905
+   > block timestamp:     1616790142
+   > account:             0x0aE7971DD94c5E39d21Da0D9C6a3B3C429360EC1
+   > balance:             6.315576138196436935
+   > gas used:            153706 (0x2586a)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00307412 ETH
+
+Migrations.address:  0xA97f3f26335CBbA722AfF84838716F0a4a008943
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00307412 ETH
+
+
+2_deploy_contracts.js
+=====================
+user:  0xcF01971DB0CAB2CBeE4A8C21BB7638aC1FA1c38c
+network:  bscTestnet
+Deploying to testnet
+
+   Deploying 'EDIPI'
+   -----------------
+   > transaction hash:    0x62bf517c4aaf2bb85f008ce1e981683f8be139697f1d929f030711e21127ba9b
+   > Blocks: 5            Seconds: 15
+   > contract address:    0xa49ED553c158C213ecE9100fb513f511fB93Ff65
+   > block number:        7433924
+   > block timestamp:     1616790199
+   > account:             0x0aE7971DD94c5E39d21Da0D9C6a3B3C429360EC1
+   > balance:             6.294562238196436935
+   > gas used:            1008440 (0xf6338)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0201688 ETH
+
+EDIPI.address:  0xa49ED553c158C213ecE9100fb513f511fB93Ff65
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.0201688 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.02324292 ETH
+
+
+warning package.json: No license field
+$ truffle run verify Migrations EDIPI --network bscTestnet
+Verifying Migrations
+Pass - Verified: https://testnet.bscscan.com/address/0xA97f3f26335CBbA722AfF84838716F0a4a008943#contracts
+Verifying EDIPI
+Pass - Verified: https://testnet.bscscan.com/address/0xa49ED553c158C213ecE9100fb513f511fB93Ff65#contracts
+Successfully verified 2 contract(s).
+Done in 183.56s.
