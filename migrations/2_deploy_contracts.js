@@ -18,7 +18,7 @@ const mainnetDeployScript = async (deployer, user) => {
 
 module.exports = async (deployer, network, addresses) => {
   let [user] = addresses;
-  user = '0xcF01971DB0CAB2CBeE4A8C21BB7638aC1FA1c38c';
+  //user = '0xcF01971DB0CAB2CBeE4A8C21BB7638aC1FA1c38c';
 
   console.log('user: ', user);
   console.log('network: ', network);
